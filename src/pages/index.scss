@@ -1,0 +1,43 @@
+.navigation-section {
+  padding: 1% 10% 2% 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .logo-section {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    img {
+      max-width: 50px;
+      max-height: 50px;
+      width: auto;
+      height: auto;
+      margin-right: 4px;
+    }
+    p {
+      color: black;
+      font-weight: bold;
+      margin-top: 20%;
+    }
+  } 
+
+  .nav-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+    padding-top: 1%;
+
+    .nav-item {
+      color: grey;
+      cursor: pointer;
+      font-size: large;
+    }
+
+    .active-tab {
+      color: black;
+      font-weight: bold;
+    }
+  }
+}
