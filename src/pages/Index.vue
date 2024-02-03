@@ -16,6 +16,22 @@
       </p>
     </div>
   </div>
+  <div class="about-section">
+    <div class="lab-info">
+      <p class="title">Data Science Research Lab</p>
+      <p class="description">
+      The Data Science Research Lab is part of Morgan State University at the Computer Science Department. We focus on converging cutting edge data science techniques with diverse fields to address complex challenges
+      </p>
+    </div>
+    <div class="upcoming-event">
+      <div class="title">
+        <img src="../assets/img/calendar-icon.png" alt="">
+        <p>upcoming Event</p>
+      </div>
+      <p class="date">05/21/2024</p>
+      <p class="event-name">2024 Data Science for Social Good Conference</p>
+    </div>
+  </div>
 </div>
 </template>
 
