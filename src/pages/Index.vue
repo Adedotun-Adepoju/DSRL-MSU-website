@@ -32,6 +32,12 @@
       <p class="event-name">2024 Data Science for Social Good Conference</p>
     </div>
   </div>
+  <div class="projects-section">
+    <div class="title-container">
+      <p  class="title">Projects</p>
+      <div id="border-bottom"></div>
+    </div>
+  </div>
 </div>
 </template>
 
