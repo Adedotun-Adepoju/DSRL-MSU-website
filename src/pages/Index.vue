@@ -72,6 +72,14 @@
   <div v-else-if="activeTab == 'Publications'" class="publications">
     <Publications></Publications>
   </div>
+  <div class="footer">
+    <div class="address">
+      <p>Address</p>
+    </div>
+    <div class="contact">
+      <p>Contact</p>
+    </div>
+  </div>
 </div>
 </template>
 
