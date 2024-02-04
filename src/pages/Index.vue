@@ -6,24 +6,25 @@
       <p>DSRL</p>
     </div>
     <div class="nav-items">
-      <p 
-        v-for="(item, key) in navItems" 
+      <p
+        v-for="(item, key) in navItems"
         :key="key"
         :class="`nav-item ${item.name == activeTab ? 'active-tab' : ''}`"
-        @click="navItemClick(item.name)"
+        @click="navItemClick(item)"
       >
-        {{ item.name }} 
+        {{ item.name }}
       </p>
     </div>
   </div>
   <div class="about-section">
     <div class="lab-info">
-      <p class="title">Data Science Research Lab</p>
-      <p class="description">
+      <p class="title" v-if="activeTab == 'Home'">Data Science Research Lab</p>
+      <p class="title" v-if="activeTab == 'Publications'">Publications</p>
+      <p class="description" v-if="activeTab == 'Home'">
       The Data Science Research Lab is part of Morgan State University at the Computer Science Department. We focus on converging cutting edge data science techniques with diverse fields to address complex challenges
       </p>
     </div>
-    <div class="upcoming-event">
+    <div class="upcoming-event" v-if="activeTab == 'Home'">
       <div class="title">
         <img src="../assets/img/calendar-icon.png" alt="">
         <p>upcoming Event</p>
@@ -32,39 +33,44 @@
       <p class="event-name">2024 Data Science for Social Good Conference</p>
     </div>
   </div>
-  <div class="projects-section">
-    <div class="title-container">
-      <p  class="title">Projects</p>
-      <div id="border-bottom"></div>
+  <div v-if="activeTab == 'Home'" class="home">
+    <div class="projects-section" id="projects">
+      <div class="title-container">
+        <p  class="title">Projects</p>
+        <div id="border-bottom"></div>
+      </div>
+      <div class="project-tiles">
+        <template v-for="(project, key) in projects">
+          <ProjectCard
+            :key="key"
+            :name="project.name"
+            :description="project.description"
+            :image="project.image_link"
+            class="project-card"
+          />
+        </template>
+      </div>
     </div>
-    <div class="project-tiles">
-      <template v-for="(project, key) in projects">
-        <ProjectCard
-          :key="key"
-          :name="project.name"
-          :description="project.description"
-          :image="project.image_link"
-          class="project-card"
-        />
-      </template>
+    <div class="people-section" id="people">
+      <div class="title-container">
+        <p  class="title">People</p>
+      </div>
+      <div class="people-tiles">
+        <template v-for="(person, key) in people">
+          <PersonCard
+            :key="key"
+            :name="person.name"
+            :title="person.title"
+            :image="person.image_link"
+            :leftMargin="person.left_margin"
+            class="person-card"
+          />
+        </template>
+      </div>
     </div>
   </div>
-  <div class="people-section">
-    <div class="title-container">
-      <p  class="title">People</p>
-    </div>
-    <div class="people-tiles">
-      <template v-for="(person, key) in people">
-        <PersonCard
-          :key="key"
-          :name="person.name"
-          :title="person.title"
-          :image="person.image_link"
-          :leftMargin="person.left_margin"
-          class="person-card"
-        />
-      </template>
-    </div>
+  <div v-else-if="activeTab == 'Publications'" class="publications">
+    <Publications></Publications>
   </div>
 </div>
 </template>
@@ -73,11 +79,13 @@
 import ProjectCard from "src/components/project-card/project.vue"
 import PersonCard from "src/components/people-card/people.vue"
 import { projects, people } from "src/data/constants"
+import Publications from './publications/publications.vue'
 export default {
   name: 'PageIndex',
   components: {
     ProjectCard,
-    PersonCard
+    PersonCard,
+    Publications
   },
 
   data() {
@@ -88,7 +96,7 @@ export default {
       navItems: [
         {
           name: "Home",
-          to: ""
+          to: "/"
         },
         {
           name: "Projects",
@@ -100,7 +108,7 @@ export default {
         },
         {
           name: "Publications",
-          to: ""
+          to: "/"
         }
       ]
     }
@@ -112,7 +120,14 @@ export default {
 
   methods: {
     navItemClick(item) {
-      this.activeTab = item
+      if (item.to != "") {
+        this.activeTab = item.name
+      } else {
+        const element = document.getElementById(item.name.toLowerCase())
+        if(element) {
+          element.scrollIntoView({ behavior: "smooth" })
+        }
+      }
     }
   }
 }
