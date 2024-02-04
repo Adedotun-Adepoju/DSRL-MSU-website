@@ -172,3 +172,29 @@
     }
   }
 }
+
+.footer {
+  background-color: #36455C;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 10% 5% 10%;
+
+  .address {
+    p {
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 25px; 
+    }
+  }
+
+  .contact {
+    p {
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 25px;
+    }
+  }
+}
