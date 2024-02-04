@@ -46,8 +46,8 @@
 .about-section {
   background-image: url("../assets/img/about.jpg");
   background-size: cover;
-  height: 93vh;
-  padding: 13% 10% 0% 10%;
+  // height: 93vh;
+  padding: 13% 10% 10% 10%;
   display: flex;
   box-sizing: border-box;
 
@@ -103,6 +103,72 @@
     .event-name:hover {
       text-decoration: underline;
       color: white;
+    }
+  }
+}
+
+.projects-section {
+  padding: 30px 10% 5% 10%;
+
+  .title-container {
+    width: 150px;
+    margin: 0 auto 0 auto;
+    .title {
+      text-align: center;
+      text-transform: uppercase;
+      color: black;
+      font-weight: bold;
+      font-size: 25px;
+      margin-bottom: 0;
+    }
+    #border-bottom {
+      border-bottom: 5px solid #D9D9D9;
+      position: relative;
+      left: 30px;
+      width: 90px;
+      margin-top: 5px;
+      margin-bottom: 70px;
+    }
+  }
+
+  .project-tiles {
+    display: flex;
+    justify-content: space-between;
+
+    .project-card {
+      width: 40%;
+      height: 400px;
+      cursor: pointer;
+    }
+  }
+}
+
+.people-section {
+  background-color: #D9D9D9;
+  padding: 30px 10% 5% 10%;
+
+  .title-container {
+    width: 150px;
+    margin: 0 auto 0 auto;
+    .title {
+      text-align: center;
+      text-transform: uppercase;
+      color: black;
+      font-weight: bold;
+      font-size: 25px;
+      margin-bottom: 0;
+    }
+  }
+
+  .people-tiles {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    .person-card {
+      // width: 300px;
+      // height: 375px;
+      // cursor: pointer;
     }
   }
 }
