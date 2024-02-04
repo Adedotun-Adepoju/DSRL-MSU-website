@@ -37,17 +37,54 @@
       <p  class="title">Projects</p>
       <div id="border-bottom"></div>
     </div>
+    <div class="project-tiles">
+      <template v-for="(project, key) in projects">
+        <ProjectCard
+          :key="key"
+          :name="project.name"
+          :description="project.description"
+          :image="project.image_link"
+          class="project-card"
+        />
+      </template>
+    </div>
+  </div>
+  <div class="people-section">
+    <div class="title-container">
+      <p  class="title">People</p>
+    </div>
+    <div class="people-tiles">
+      <template v-for="(person, key) in people">
+        <PersonCard
+          :key="key"
+          :name="person.name"
+          :title="person.title"
+          :image="person.image_link"
+          :leftMargin="person.left_margin"
+          class="person-card"
+        />
+      </template>
+    </div>
   </div>
 </div>
 </template>
 
 <script>
+import ProjectCard from "src/components/project-card/project.vue"
+import PersonCard from "src/components/people-card/people.vue"
+import { projects, people } from "src/data/constants"
 export default {
   name: 'PageIndex',
+  components: {
+    ProjectCard,
+    PersonCard
+  },
 
   data() {
     return {
       activeTab: "Home",
+      projects: projects,
+      people: people,
       navItems: [
         {
           name: "Home",

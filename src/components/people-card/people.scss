@@ -1,0 +1,28 @@
+.main-container {
+  // background-size: cover;
+  .circular-image {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    // border: 1px solid red;
+      border-radius: 50%;
+
+    img {
+      width: auto;
+    }
+  }
+  .info {
+    .name {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 3px;
+    }
+    .title {
+      // font-weight: bold;
+      text-align: center;
+    }
+  }
+  // border-radius: 50%;
+}
