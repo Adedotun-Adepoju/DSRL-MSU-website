@@ -1,7 +1,9 @@
 <template>
   <div class="main-container">
-    <div class="circular-image">
-      <img :src="image" :style="{ marginLeft: `${leftMargin}` }"/>
+    <div class="wrapper">
+      <div class="circular-image">
+        <img :src="image" :style="{ marginLeft: `${leftMargin}`, marginTop: `${topMargin}` }"/>
+      </div>
     </div>
     <div class="info">
       <p class="name">{{ name }}</p>
@@ -27,6 +29,10 @@ export default {
       required: true
     },
    leftMargin: {
+    type: String,
+    required: true
+   },
+   topMargin: {
     type: String,
     required: true
    }

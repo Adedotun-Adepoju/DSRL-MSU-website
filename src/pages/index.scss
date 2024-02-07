@@ -23,6 +23,10 @@
     }
   } 
 
+  .menu-icon {
+    display: none;
+  }
+
   .nav-items{
     display: flex;
     flex-direction: row;
@@ -120,7 +124,7 @@
         color: black;
         font-weight: bold;
         font-size: 25px;
-        margin-bottom: 0;
+        margin-bottom: 0px;
       }
       #border-bottom {
         border-bottom: 5px solid #D9D9D9;
@@ -128,7 +132,7 @@
         left: 30px;
         width: 90px;
         margin-top: 5px;
-        margin-bottom: 70px;
+        margin-bottom: 40px;
       }
     }
   
@@ -163,13 +167,14 @@
   
     .people-tiles {
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
+      flex-wrap: wrap;
       margin-top: 30px;
   
       .person-card {
-        // width: 300px;
-        // height: 375px;
-        // cursor: pointer;
+        padding: 0px;
+        flex-basis: 33.3%;
+        margin-bottom: 30px;
       }
     }
   }
@@ -197,6 +202,108 @@
       font-weight: bold;
       text-transform: uppercase;
       font-size: 25px;
+    }
+  }
+}
+
+// mobile-view
+@media (max-width: 599px) {
+  .navigation-section {
+    padding: 0.3% 2% 0.5% 30px;
+    .menu-icon{
+      display: block;
+      padding: 7px 10px 5px 2px;
+      
+      .icon {
+        align-items: center;
+      }
+    }
+    .logo-section {
+      img {
+        max-width: 40px;
+        max-height: 40px;
+      }
+      p {
+        font-size: 10px;
+      }
+    }
+
+    .nav-items {
+      display: none;
+    }
+  }
+
+  .about-section {
+    padding: 40px 20px 60px 20px;
+    display: block;
+
+    .lab-info {
+      width: 100%;
+
+      .title {
+        font-size: 26px;
+      }
+      .description {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight:normal;
+      }
+    }
+    .upcoming-event {
+      margin-top: 40px;
+      margin-left: 10px;
+
+      .title {
+        gap: 15px;
+        
+        img {
+          max-width: 30px;
+          max-height: 30px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
+      .date {
+        font-size: 18px;
+      }
+      .event-name {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .home {
+    .projects-section {
+      .title-container {
+        .title {
+          font-size: 20px;
+        }
+      }
+      .project-tiles {
+        display: block;
+
+        .project-card {
+          width: 100%;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  .people-section {
+    .people-tiles {
+      display: row;
+      flex-wrap:wrap;
+      justify-content: center;
+
+      .person-card {
+        flex-basis: 100%;
+        // border: 1px solid red;
+        // width: 100%;
+      }
     }
   }
 }

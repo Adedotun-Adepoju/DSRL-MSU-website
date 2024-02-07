@@ -5,6 +5,17 @@
       <img src="../assets/img/lab-logo.jpeg" alt="">
       <p>DSRL</p>
     </div>
+    <div class="menu-icon">
+      <q-icon name="menu" size="md" class="icon">
+        <q-menu>
+          <q-list>
+            <q-item clickable v-close-popup v-for="(item, keys) in navItems" :key="keys" @click="navItemClick(item)">
+              <q-item-section>{{ item.name }}</q-item-section>
+            </q-item>
+          </q-list>
+        </q-menu>  
+      </q-icon>
+    </div>
     <div class="nav-items">
       <p
         v-for="(item, key) in navItems"
@@ -63,6 +74,7 @@
             :title="person.title"
             :image="person.image_link"
             :leftMargin="person.left_margin"
+            :topMargin="person.top_margin"
             class="person-card"
           />
         </template>

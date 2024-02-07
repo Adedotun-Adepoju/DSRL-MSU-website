@@ -3,7 +3,7 @@
     <div v-for="(item, key) in publicationYears" :key="key" class="year">
       <p>{{ item }}</p>
       <hr>
-      <div v-for="(publication, key) in getPublicationsByYear(item)" :key="key" class="people">
+      <div v-for="(publication, key) in getPublicationsByYear(item)" :key="key" class="publication">
         <span v-for="(person, key) in publication.people" :key="key"> {{ person }},</span>
         <span class="title"> {{ publication.title }}</span>
         <span class="extras"> {{ publication.extras }}</span>
@@ -39,8 +39,6 @@ export default {
       const publications = this.publications.filter(item => {
         return item.year == year
       })
-      console.log({year})
-      console.log({ publications })
       return publications
     }
   }

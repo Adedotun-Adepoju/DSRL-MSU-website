@@ -1,16 +1,22 @@
 .main-container {
   // background-size: cover;
-  .circular-image {
-    display: inline-block;
-    position: relative;
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    // border: 1px solid red;
+  margin: 0px;
+  padding: 0px;
+  .wrapper {
+    margin-bottom: 20px;
+    .circular-image {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      // border: 1px solid red;
       border-radius: 50%;
-
-    img {
-      width: auto;
+      margin: 0 auto 0 auto;
+  
+      img {
+        width: auto;
+        margin: 0 auto 0 auto;
+      }
     }
   }
   .info {
