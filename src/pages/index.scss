@@ -124,7 +124,7 @@
         color: black;
         font-weight: bold;
         font-size: 25px;
-        margin-bottom: 0;
+        margin-bottom: 0px;
       }
       #border-bottom {
         border-bottom: 5px solid #D9D9D9;
@@ -132,7 +132,7 @@
         left: 30px;
         width: 90px;
         margin-top: 5px;
-        margin-bottom: 70px;
+        margin-bottom: 40px;
       }
     }
   
@@ -270,6 +270,24 @@
       .event-name {
         font-size: 20px;
         font-weight: bold;
+      }
+    }
+  }
+
+  .home {
+    .projects-section {
+      .title-container {
+        .title {
+          font-size: 20px;
+        }
+      }
+      .project-tiles {
+        display: block;
+
+        .project-card {
+          width: 100%;
+          margin-bottom: 40px;
+        }
       }
     }
   }
