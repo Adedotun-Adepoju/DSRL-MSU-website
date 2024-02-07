@@ -208,7 +208,7 @@
 // mobile-view
 @media (max-width: 599px) {
   .navigation-section {
-    padding: 0.3% 2% 0.5% 2%;
+    padding: 0.3% 2% 0.5% 20px;
     .menu-icon{
       display: block;
       padding: 7px 10px 5px 2px;
@@ -229,6 +229,48 @@
 
     .nav-items {
       display: none;
+    }
+  }
+
+  .about-section {
+    padding: 40px 20px 30px 20px;
+    display: block;
+
+    .lab-info {
+      width: 100%;
+
+      .title {
+        font-size: 26px;
+      }
+      .description {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight:normal;
+      }
+    }
+    .upcoming-event {
+      margin-top: 40px;
+      margin-left: 10px;
+
+      .title {
+        gap: 15px;
+        
+        img {
+          max-width: 30px;
+          max-height: 30px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
+      .date {
+        font-size: 18px;
+      }
+      .event-name {
+        font-size: 20px;
+        font-weight: bold;
+      }
     }
   }
 }
