@@ -23,6 +23,10 @@
     }
   } 
 
+  .menu-icon {
+    display: none;
+  }
+
   .nav-items{
     display: flex;
     flex-direction: row;
@@ -197,6 +201,34 @@
       font-weight: bold;
       text-transform: uppercase;
       font-size: 25px;
+    }
+  }
+}
+
+// mobile-view
+@media (max-width: 599px) {
+  .navigation-section {
+    padding: 0.3% 2% 0.5% 2%;
+    .menu-icon{
+      display: block;
+      padding: 7px 10px 5px 2px;
+      
+      .icon {
+        align-items: center;
+      }
+    }
+    .logo-section {
+      img {
+        max-width: 40px;
+        max-height: 40px;
+      }
+      p {
+        font-size: 10px;
+      }
+    }
+
+    .nav-items {
+      display: none;
     }
   }
 }
