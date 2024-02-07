@@ -14,27 +14,34 @@ export const projects = [
 export const people = [
   {
     name: "Dr Radhouane Chouchane",
+    slug: "radhouane_chouchane",
     title: "Associate Professor",
     image_link: "img/people/dr_chouchane.png",
     left_margin: "-40px",
-    top_margin: "0px"
+    top_margin: "0px",
+    description:"Radhouane Chouchane is passionate about developing and delivering quality projects that build on the current developments in cloud computing, machine learning and natural language processing. His ongoing research interests aim to use ML and NLP in the cloud to support the activities of social workers in Baltimore City and other areas where there is potential for data to yield helpful insights that social workers can use in their day-to-day activities. Since 2011, Radhouane Chouchane has been actively involved with such organizations as STARS, WIT and NCWIT whose mission is to broaden the participation of underrepresented minorities in computing."
   },
   {
     name: "Adedotun Adepoju",
+    slug: "adedotun_adepoju",
     title: "Master's Student",
     image_link: "img/people/dotun.png"  ,
     left_margin: "-5px",
     top_margin: "3px"
   },
   {
+    id:3,
     name: "Dapiriye Briggs",
+    slug: "dapiriye_briggs",
     title: "Phd Student",
     image_link: "img/people/dapiriye.png"  ,
     left_margin: "-60px",
     top_margin: "0px"
   },
   {
+    id: 4,
     name: "Praharsha Pokharel",
+    slug: "praharsha_pokharel",
     title: "Phd Student",
     image_link: "img/people/praharsha.png"  ,
     left_margin: "-50px",
@@ -42,6 +49,7 @@ export const people = [
   },
   {
     name: "Bezaleel Akinbami",
+    slug: "bezaleel_akinbami",
     title: "Phd Student",
     image_link: "img/people/bezaleel.png"  ,
     left_margin: "-30px",

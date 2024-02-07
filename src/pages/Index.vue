@@ -51,15 +51,14 @@
         <div id="border-bottom"></div>
       </div>
       <div class="project-tiles">
-        <template v-for="(project, key) in projects">
-          <ProjectCard
-            :key="key"
-            :name="project.name"
-            :description="project.description"
-            :image="project.image_link"
-            class="project-card"
-          />
-        </template>
+        <ProjectCard
+          v-for="(project, key) in projects"
+          :key="key"
+          :name="project.name"
+          :description="project.description"
+          :image="project.image_link"
+          class="project-card"
+        />
       </div>
     </div>
     <div class="people-section" id="people">
@@ -67,17 +66,17 @@
         <p  class="title">People</p>
       </div>
       <div class="people-tiles">
-        <template v-for="(person, key) in people">
-          <PersonCard
-            :key="key"
-            :name="person.name"
-            :title="person.title"
-            :image="person.image_link"
-            :leftMargin="person.left_margin"
-            :topMargin="person.top_margin"
-            class="person-card"
-          />
-        </template>
+        <PersonCard
+          v-for="(person, key) in people" 
+          :key="key"
+          :name="person.name"
+          :title="person.title"
+          :slug="person.slug"
+          :image="person.image_link"
+          :leftMargin="person.left_margin"
+          :topMargin="person.top_margin"
+          class="person-card"
+        />
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="main-container">
     <div class="wrapper">
-      <div class="circular-image">
+      <div class="circular-image" @click="goToDescription(slug)">
         <img :src="image" :style="{ marginLeft: `${leftMargin}`, marginTop: `${topMargin}` }"/>
       </div>
     </div>
@@ -21,6 +21,10 @@ export default {
       required: true
     },
     title: {
+      type: String,
+      required: true
+    },
+    slug: {
       type: String,
       required: true
     },
@@ -46,7 +50,9 @@ export default {
 
   }, 
   methods: {
-
+    goToDescription(slug) {
+      this.$router.push(`/people/${slug}`)
+    }
   }
 }
 </script>
