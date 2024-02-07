@@ -167,13 +167,14 @@
   
     .people-tiles {
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
+      flex-wrap: wrap;
       margin-top: 30px;
   
       .person-card {
-        // width: 300px;
-        // height: 375px;
-        // cursor: pointer;
+        padding: 0px;
+        flex-basis: 33.3%;
+        margin-bottom: 30px;
       }
     }
   }
@@ -208,7 +209,7 @@
 // mobile-view
 @media (max-width: 599px) {
   .navigation-section {
-    padding: 0.3% 2% 0.5% 20px;
+    padding: 0.3% 2% 0.5% 30px;
     .menu-icon{
       display: block;
       padding: 7px 10px 5px 2px;
@@ -233,7 +234,7 @@
   }
 
   .about-section {
-    padding: 40px 20px 30px 20px;
+    padding: 40px 20px 60px 20px;
     display: block;
 
     .lab-info {
@@ -288,6 +289,20 @@
           width: 100%;
           margin-bottom: 40px;
         }
+      }
+    }
+  }
+
+  .people-section {
+    .people-tiles {
+      display: row;
+      flex-wrap:wrap;
+      justify-content: center;
+
+      .person-card {
+        flex-basis: 100%;
+        // border: 1px solid red;
+        // width: 100%;
       }
     }
   }

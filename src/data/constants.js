@@ -16,13 +16,36 @@ export const people = [
     name: "Dr Radhouane Chouchane",
     title: "Associate Professor",
     image_link: "img/people/dr_chouchane.png",
-    left_margin: "-40px"
+    left_margin: "-40px",
+    top_margin: "0px"
   },
   {
     name: "Adedotun Adepoju",
     title: "Master's Student",
     image_link: "img/people/dotun.png"  ,
-    left_margin: "-5px"
+    left_margin: "-5px",
+    top_margin: "3px"
+  },
+  {
+    name: "Dapiriye Briggs",
+    title: "Phd Student",
+    image_link: "img/people/dapiriye.png"  ,
+    left_margin: "-60px",
+    top_margin: "0px"
+  },
+  {
+    name: "Praharsha Pokharel",
+    title: "Phd Student",
+    image_link: "img/people/praharsha.png"  ,
+    left_margin: "-50px",
+    top_margin: "-20px"
+  },
+  {
+    name: "Bezaleel Akinbami",
+    title: "Phd Student",
+    image_link: "img/people/bezaleel.png"  ,
+    left_margin: "-30px",
+    top_margin: "0px"
   }
 ]
 

@@ -39,8 +39,6 @@ export default {
       const publications = this.publications.filter(item => {
         return item.year == year
       })
-      console.log({year})
-      console.log({ publications })
       return publications
     }
   }

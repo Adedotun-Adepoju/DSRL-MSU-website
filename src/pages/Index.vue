@@ -74,6 +74,7 @@
             :title="person.title"
             :image="person.image_link"
             :leftMargin="person.left_margin"
+            :topMargin="person.top_margin"
             class="person-card"
           />
         </template>
