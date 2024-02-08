@@ -27,7 +27,8 @@ export const people = [
     title: "Master's Student",
     image_link: "img/people/dotun.png"  ,
     left_margin: "-5px",
-    top_margin: "3px"
+    top_margin: "3px",
+    description: ""
   },
   {
     id:3,
@@ -36,7 +37,8 @@ export const people = [
     title: "Phd Student",
     image_link: "img/people/dapiriye.png"  ,
     left_margin: "-60px",
-    top_margin: "0px"
+    top_margin: "0px",
+    description: "Dapiriye Briggs is enthusiastic about utilizing data science and artificial intelligence to engineer sustainable systems, particularly in under-served communities, with a focus on enhancing societal infrastructure. Her dedication extends to critical domains such as health, education, and sports, where she envisions leveraging these technologies to enhance overall well-being."
   },
   {
     id: 4,
@@ -45,7 +47,8 @@ export const people = [
     title: "Phd Student",
     image_link: "img/people/praharsha.png"  ,
     left_margin: "-50px",
-    top_margin: "-20px"
+    top_margin: "-20px",
+    description: "I’m Praharsha Pokharel, a motivated and ambitious data science research student at Morgan State University. With a keen interest in Data Science, Machine Learning, and Artificial Intelligence, I dedicate myself to a mission to explore the limitless possibilities in these fields.\nI am actively engaged in research projects in the Morgan State Data Science Research Lab (MSU-DSRL), where I learn and apply skills including programming in Python and its libraries, statistical analysis methods, machine learning predictions, report writing, and so on.\nBeing a part of MSU-DSRL has given me endless opportunities to explore the endless world of Data Science and Artificial intelligence. We, as a team actively engage in the growth of not only technical skills but also soft skills like effective communication and collaborative skills helping each other be an effective team player in the real world."
   },
   {
     name: "Bezaleel Akinbami",
@@ -53,7 +56,8 @@ export const people = [
     title: "Phd Student",
     image_link: "img/people/bezaleel.png"  ,
     left_margin: "-30px",
-    top_margin: "0px"
+    top_margin: "0px",
+    description: "Bezaleel is interested in the creation of bio-artificial organs and aspires to engineer organs that emulate natural functions through machine learning. Specifically, I am intrigued by the prospect of developing an AI-driven heart capable of independent action."
   }
 ]
 

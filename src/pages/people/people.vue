@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="circular-image">
-        <img :src="person.image_link" :style="{ marginLeft: '-40px' }"/>
+        <img :src="person.image_link" :style="{ marginLeft: person.left_margin, marginTop: person.top_margin }"/>
       </div>
     </div>
     <div class="about">
