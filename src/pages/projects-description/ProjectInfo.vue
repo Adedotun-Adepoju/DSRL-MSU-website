@@ -20,42 +20,41 @@
     </div>
     <div class="details">
       <div class="info">
-        <p class="name" :style="{ color: mode == 'light' ? 'black' : 'white'}">{{ person.name }}</p>
-        <p class="title" :style="{ color: 'grey'}">{{ person.title }}</p>
+        <p class="name" :style="{ color: mode == 'light' ? 'black' : 'white'}">{{ project.name }}</p>
         <div class="icons">
           <!-- <q-icon name="email"></q-icon> -->
         </div>
       </div>
       <div class="circular-image">
-        <img :src="person.image_link" :style="{ marginLeft: person.left_margin, marginTop: person.top_margin }"/>
+        <img :src="project.image_link" :style="{ }"/>
       </div>
     </div>
     <div class="about">
-      <p :style="{ color: mode == 'light' ? 'black' : 'white'}">{{ person.description }}</p>
+      <p :style="{ color: mode == 'light' ? 'black' : 'white'}">{{ project.description }}</p>
     </div>
   </div>
 </template>
 
 <script>
-import { people } from "src/data/constants"
+import { projects } from "src/data/constants"
 export default {
-  name: 'People',
+  name: 'ProjectInfo',
 
   data() {
     return {
-      people: people,
+      projects: projects,
       mode: "light",
-      person:{}
+      project:{}
     }
   },
 
   mounted() {
     const slug = this.$route.params.name
-    const person = this.people.filter(person => {
-      return person.slug == slug
+    const project = this.projects.filter(project => {
+      return project.slug == slug
     })
 
-    this.person = person[0]
+    this.project = project[0]
   },
   computed: {
 
@@ -70,5 +69,5 @@ export default {
 </script>
 
 <style scoped>
-@import "./person.scss"
+@import "./ProjectInfo.scss"
 </style>

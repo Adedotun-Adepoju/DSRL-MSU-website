@@ -1,5 +1,6 @@
 import Publications from "src/pages/publications/publications.vue"
-import People from "src/pages/people/people.vue"
+import Person from "src/pages/person/person.vue"
+import ProjectInfo from "src/pages/projects-description/ProjectInfo.vue"
 const routes = [
   {
     path: '/',
@@ -14,8 +15,14 @@ const routes = [
   },
   {
     path: "/people/:name",
-    component: People,
+    component: Person,
     name: "people",
+    children: []
+  },
+  {
+    path: "/project/:name",
+    component: ProjectInfo,
+    name: "project",
     children: []
   },
 

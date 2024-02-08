@@ -2,12 +2,14 @@ export const projects = [
   {
     name: "Building Energy Efficiency",
     description: "We directed our attention to evaluating the ways in which data science could be used to help reduce building carbon emissions",
-    image_link: "img/building.jpg"
+    image_link: "img/building.jpg",
+    slug: "building_energy_efficiency"
   },
   {
     name: "Data Science for Social Work",
     description: "This work focuses on identifying ways on reducing the high rates of occurences of incidents such as violence against women, theft and murder.",
-    image_link: "img/nasa.jpg"
+    image_link: "img/nasa.jpg",
+    slug: "data_science_for_social_work"
   }
 ]
 

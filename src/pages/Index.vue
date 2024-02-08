@@ -58,6 +58,7 @@
           :description="project.description"
           :image="project.image_link"
           class="project-card"
+          @click="goToDescription(project)"
         />
       </div>
     </div>
@@ -147,6 +148,9 @@ export default {
           element.scrollIntoView({ behavior: "smooth" })
         }
       }
+    },
+    goToDescription(project) {
+      this.$router.push(`/project/${project.slug}`)
     }
   }
 }
